@@ -6,7 +6,7 @@ maps = [[0] * N for _ in range(N)]
 K = int(input())
 for _ in range(K):
   a, b = map(int, input().split())
-  maps[a - 1][b - 1] = 1  # 사과 위치
+  maps[a - 1][b - 1] = 1
 
 turn_time = {}
 L = int(input())
@@ -33,12 +33,11 @@ def turn_right():
 time = 0
 snake = deque([(0, 0)])
 x, y = 0, 0
-maps[x][y] = 2  # 뱀의 초기 위치 표시
+maps[x][y] = 2
 
 while True:
   time += 1
 
-  # 이동
   x += move[0]
   y += move[1]
 
